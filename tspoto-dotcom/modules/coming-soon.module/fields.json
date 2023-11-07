@@ -1,0 +1,125 @@
+[ {
+  "id" : "styles",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "67ca71be-c4f3-8e9d-005d-a67c71bf738a",
+  "name" : "headline",
+  "display_width" : null,
+  "label" : "Headline",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Coming Soon."
+}, {
+  "id" : "cb97112c-fc28-5993-2c62-7a81b1cace84",
+  "name" : "subhead",
+  "display_width" : null,
+  "label" : "Subhead",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>In the meantime, feel free to browse my resume, explore my GitHub, or send me an email.</p>"
+}, {
+  "id" : "69ab3869-5f88-eaee-0b0f-aa54d83befd0",
+  "name" : "links",
+  "display_width" : null,
+  "label" : "Connect Links",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "link",
+    "name" : "resume",
+    "display_width" : null,
+    "label" : "Resume",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "11b56ca5-5300-de7b-79d1-fee7052c14e1",
+    "name" : "github",
+    "display_width" : null,
+    "label" : "GitHub",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "02761a2b-6e9c-1c01-6fd2-89bbfcadcc1c",
+    "name" : "email",
+    "display_width" : null,
+    "label" : "Email",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "connect" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    },
+    "github" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    },
+    "email" : {
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }
+} ]

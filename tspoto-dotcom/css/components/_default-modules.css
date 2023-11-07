@@ -84,3 +84,112 @@
   height: auto;
   max-width: 100%;
 }
+
+.coming-soon-block {
+  border: 3px solid #0C5394;
+  background: #FFF;
+  background-image: url('data:image/svg+xml,<svg width="377" height="308" viewBox="0 0 377 308" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="212.925" cy="95.5699" r="212.102" fill="%230C5394" fill-opacity="0.05"/></svg>'), url('data:image/svg+xml,<svg width="353" height="236" viewBox="0 0 353 236" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="176.812" cy="175.952" r="175.874" fill="%230C5394" fill-opacity="0.05"/></svg>');
+  background-repeat: no-repeat; 
+  background-position: top right, bottom left;
+  box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.05);
+  width: 800px;
+  padding: 75px 50px 25px 50px;
+  text-align: center;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coming-soon-block h1 {
+  color: #0C5394;
+  font-family: Helvetica, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.coming-soon-block p {
+  color: #0C5394;
+  font-family: PT Sans, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.coming-soon-block .loader {
+  overflow: hidden;
+  position: relative;
+  border-radius: 45px;
+  background: #0C5394;
+  width: 510px;
+  height: 12px;
+  max-width: 75%;
+  flex-shrink: 0;
+  margin: 0 auto 75px auto;
+}
+
+.coming-soon-block .loader span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient( -45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.icons {
+  display: inline-block; 
+	text-align: left; 
+  list-style: none;
+  padding: 0;
+  @media (min-width: 768px) {
+    margin: 75px 0 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .icons li {
+    display: inline;
+    margin: 0 50px;
+  }
+}
+
+.icons li a {
+  color: #0C5394;
+  font-family: Font Awesome 5 Free;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.icons li a:hover, .icons li a:focus, .icons li a:active  {
+text-decoration: underline;
+}
+
+.icons li a i { 
+  margin-right: 5px;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}

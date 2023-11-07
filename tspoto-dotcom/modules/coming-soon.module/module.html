@@ -1,0 +1,34 @@
+<div class="coming-soon-block">
+   <h1>{{ module.headline }}</h1>
+   <div class="loader"><span></span></div>
+   {{ module.subhead }}
+   <ul class="icons">
+      <li>{% set href = module.links.resume.url.href %}
+         {% if module.links.resume.url.type is equalto "EMAIL_ADDRESS" %}
+         	{% set href = "mailto:" + href %}
+         {% endif %}
+         <a href="{{ href }}"
+         {% if module.links.resume.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.links.resume.rel %}rel="{{ module.links.resume.rel }}"{% endif %}
+         ><i class="fa-regular fa-file"></i>Resume</a>
+      </li>
+      <li>{% set href = module.links.github.url.href %}
+         {% if module.links.github.url.type is equalto "EMAIL_ADDRESS" %}
+        	 {% set href = "mailto:" + href %}
+         {% endif %}
+         <a href="{{ href }}"
+         {% if module.links.github.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.links.github.rel %}rel="{{ module.links.github.rel }}"{% endif %}
+         ><i class="fa-brands fa-github"></i>GitHub</a>
+      </li>
+      <li>{% set href = module.links.email.url.href %}
+         {% if module.links.email.url.type is equalto "EMAIL_ADDRESS" %}
+         	{% set href = "mailto:" + href %}
+         {% endif %}
+         <a href="{{ href }}"
+         {% if module.links.email.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.links.email.rel %}rel="{{ module.links.email.rel }}"{% endif %}
+         ><i class="fas fa-envelope"></i>Email</a>
+      </li>
+   </ul>
+</div>

@@ -1,0 +1,19 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Coming Soon
+  screenshotPath: ../images/template-previews/about.png
+-->
+
+{% extends "./layouts/base.html" %}
+{% block header %}
+{% endblock header %}
+{% block body %}
+ 
+  {% module "coming-soon" path="../modules/coming-soon",
+  label="Coming Soon"
+  %}
+
+{% endblock body %}
+{% block footer %}
+{% endblock footer %}
