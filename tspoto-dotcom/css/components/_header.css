@@ -373,13 +373,12 @@
   .header__navigation.open,
   .header__search.open,
   .header__language-switcher.open {
-    background-color: #F8FAFC;
     display: block;
     left: 0;
     min-height: calc(100vh - 115px);
     position: absolute;
     right: 0;
-    top: 75px;
+    top: 5px;
     z-index: 2;
   }
 

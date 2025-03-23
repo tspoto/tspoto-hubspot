@@ -66,7 +66,7 @@
         {% if module.styles.background.color.color %}
           .social-links__icon:hover,
           .social-links__icon:focus {
-              background-color: rgba({{ color_variant(module.styles.background.color.color, -80)|convert_rgb }}, {{ module.styles.background.color.opacity / 100 }});
+              background-color: rgba({{ color_variant(module.styles.background.color.color, -20)|convert_rgb }}, {{ module.styles.background.color.opacity / 100 }});
           }
         {% endif %}
 

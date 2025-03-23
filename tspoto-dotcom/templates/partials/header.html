@@ -10,7 +10,7 @@
       label="Language switcher",
       display_mode="localized"
       styles={
-        "group_button" : {
+     https://developers.hubspot.com/docs/guides/cms/content/themes/hubspot-cms-boilerplate   "group_button" : {
           "group_alignment" : {
             "alignment" : {
               "horizontal_align" : "RIGHT"
@@ -161,7 +161,7 @@
   {% endif %}
 {% endmacro %}
 <header class="header">
-
+<div class="top-line"></div>
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
   <a href="#main-content" class="header__skip">Skip to content</a>
@@ -188,7 +188,6 @@
         }
       %}
     </div>
-
     {# Header navigation column #}
 
     <div class="header__column">
@@ -205,25 +204,14 @@
             </div>
           </div>
         {% endif %}
-        <div class="header__search header--element">
-          {% module "site_search"
-            path="@hubspot/search_input",
-            label="Search",
-            field_label="Search",
-            placeholder=""
-          %}
-        </div>
       </div>
 
       {# Header navigation row two #}
 
       <div class="header__row-2">
-        <div class="header--toggle header__navigation--toggle"></div>
         {% if content.translated_content|length or is_listing_view and group.translations %}
           <div class="header--toggle header__language-switcher--toggle"></div>
         {% endif %}
-        <div class="header--toggle header__search--toggle"></div>
-        <div class="header__close--toggle"></div>
         <div class="header__navigation header--element">
           {% module "navigation-primary"
             path="../../modules/menu",
@@ -233,7 +221,8 @@
       </div>
 
     </div>
-
+    <div class="header--toggle header__navigation--toggle"></div>
+    <div class="header__close--toggle"></div>
   </div>
 
   {# Bottom header drag and drop area #}

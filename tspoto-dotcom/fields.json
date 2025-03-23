@@ -41,6 +41,32 @@
         "default": {
           "color": "#F8FAFC"
         }
+      },
+      {
+        "label": "Body",
+        "name": "body_color",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "default": {
+          "color": "#5F4D40"
+        }
+      },
+      {
+        "label": "Border",
+        "name": "border_color",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "default": {
+          "color": "#D1CDC4"
+        }
       }
     ]
   },

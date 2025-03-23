@@ -135,12 +135,62 @@
 {% set table_cell_spacing = theme.tables.cells.spacing.spacing.css %}
 {% set table_border = theme.tables.cells.border.border.css %}
 
+ul {
+  padding-left: 1em;
+  font-size: .75em;
+}
+
+ul li {
+  margin: .75em 0;
+}
+
+ul li i {
+  color: {{ theme.header.menu.text.color.color}};
+}
+
 /* 1g. Website header */
 
 {% set nav_font_color = theme.header.menu.text.color.color %}
 {% set nav_drop_down_font_color = theme.header.menu.drop_downs.text.color.color %}
 {% set nav_drop_down_bg_color = color(theme.header.menu.drop_downs.background.color) %}
 {% set nav_drop_down_border = theme.header.menu.drop_downs.border.border.css %}
+
+header {
+  line-height: 0;
+  border-bottom: 1px solid {{ theme.global_colors.border_color.color }};
+}
+
+header .top-line {
+  background-color: {{ theme.header.menu.text.color.color}};
+  height: 6px;
+}
+
+header .header__logo--main {
+    padding: .6rem 0;
+}
+
+
+
+@media (max-width: 767px) {
+    .header__logo {
+      max-width: none;
+    }
+    .header__container {
+        padding: 0 1em;
+    }
+    .header__row-2 {
+      padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  header .header__container {
+    padding-inline: 100px;
+    margin-inline: auto;
+  }
+}
+
+
 
 {% set header_bg_color = color(theme.header.background.color) %}
 
@@ -165,7 +215,21 @@
 .dnd-section > .row-fluid {
   max-width: {{ container_width }};
 }
+html {
+  scroll-behavior: smooth;
 
+}
+
+body {
+  background: {{ theme.global_colors.secondary.color }};
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: 0 1.75em;
+    border-inline: 1px solid {{ theme.global_colors.border_color.color }};
+  }
+}
 {###########################################################################}
 {###########################   3. Typography   #############################}
 {###########################################################################}
@@ -189,18 +253,15 @@ p {
 /* Anchors */
 
 a {
-  {{ anchor_font.style }};
   color: {{ anchor_font.color }};
 }
 
 a:hover,
 a:focus {
-  {{ anchor_font.style }};
   color: {{ color_variant(anchor_font.color, -40) }};
 }
 
 a:active {
-  {{ anchor_font.style }};
   color: {{ color_variant(anchor_font.color, 40) }};
 }
 
@@ -258,6 +319,24 @@ h6,
 
 blockquote {
   border-left-color: {{ secondary_color }};
+}
+
+h1.title, h2.subtitle {
+  margin: 0 auto;
+}
+
+h1.title {
+  text-align: center;
+  white-space: pre-wrap;
+  max-width: 36ch;
+}
+
+h2.subtitle {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 64px;
+  white-space: pre-wrap;
+  max-width: 75ch;
 }
 
 {###########################################################################}
@@ -473,7 +552,11 @@ tfoot td {
 .header__logo .logo-company-name,
 .header__language-switcher-label-current,
 .header__language-switcher .lang_list_class li a {
-  color: {{ nav_font_color }};
+  color: {{ theme.global_colors.body_color.color }};
+  font-size: 0.875rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  position: relative;
   font-family: {{ body_font.font }};
 }
 
@@ -557,6 +640,7 @@ tfoot td {
 @media(max-width: 767px) {
   .header__navigation {
     background-color: {{ header_bg_color }};
+    top: 0;
   }
 
   .header__navigation-toggle svg,
